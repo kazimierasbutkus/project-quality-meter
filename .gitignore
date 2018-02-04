@@ -8,3 +8,5 @@
 nbproject/
 /nbproject/private/
 .vscode/
+data/
+web/app/vendor/

@@ -15,12 +15,17 @@ services:
             - "mongodb"
     php:
         image: nanoninja/php-fpm
+        container_name: php
+        links:
+            - "mongodb"
         restart: always
         volumes:
             - "./etc/php/php.ini:/usr/local/etc/php/conf.d/php.ini"
             - ./web:/web
     composer:
         image: composer/composer
+        links:
+            - "php"
         volumes:
             - ./web/app:/app
         command: install
