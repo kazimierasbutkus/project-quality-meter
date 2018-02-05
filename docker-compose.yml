@@ -28,7 +28,7 @@ services:
             - "php"
         volumes:
             - ./web/app:/app
-        command: install
+        command: install --ignore-platform-reqs
     mongodb:
         image: mongo
         container_name: mongo

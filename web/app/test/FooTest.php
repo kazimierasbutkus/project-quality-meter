@@ -10,6 +10,6 @@ class FooTest extends TestCase
     public function testGetName()
     {
         $foo = new Foo();
-        $this->assertEquals($foo->getName(), 'Nginx PHP Mongo');
+        $this->assertEquals($foo->getItems(), 'Nginx PHP Mongo');
     }
 }
